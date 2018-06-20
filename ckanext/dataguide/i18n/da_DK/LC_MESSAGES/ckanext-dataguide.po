@@ -1,0 +1,76 @@
+# Danish (Denmark) translations for ckanext-dataguide.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the ckanext-dataguide
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-dataguide 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-05-17 12:35+0200\n"
+"PO-Revision-Date: 2017-05-17 12:36+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: da_DK\n"
+"Language-Team: da_DK <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/dataguide/templates/admin/base.html:5
+#: ckanext/dataguide/templates/admin/data_guide.html:22
+msgid "Data Guide"
+msgstr "Data Guide"
+
+#: ckanext/dataguide/templates/admin/data_guide.html:28
+msgid ""
+"In this section the administrator can manage the groups shown on the Home"
+" page."
+msgstr "I denne sektion kan administartoren administere de grupper, der fremgår på startsiden"
+
+#: ckanext/dataguide/templates/admin/data_guide.html:29
+msgid "The groups which are placed in the"
+msgstr "Grupperne som er placeret i"
+
+#: ckanext/dataguide/templates/admin/data_guide.html:29
+#: ckanext/dataguide/templates/admin/snippets/groups_list.html:23
+msgid "Data Guide Groups"
+msgstr "Data Guide Grupper"
+
+#: ckanext/dataguide/templates/admin/data_guide.html:29
+msgid ""
+"placeholder will be shown on the Home page with the specific order, set "
+"through this page."
+msgstr "variabel vil vises på startsiden i den rækkefølge, som angives på denne side."
+
+#: ckanext/dataguide/templates/admin/data_guide.html:30
+msgid ""
+"Moving groups between the two placeholders is possible by simple dragging"
+" and dropping."
+msgstr "Det er muligt at flytte grupper mellem to variabler ved at trækkke og slippe dem."
+
+#: ckanext/dataguide/templates/admin/data_guide.html:31
+msgid "Please note that"
+msgstr "Bemærk venligst at"
+ 
+#: ckanext/dataguide/templates/admin/data_guide.html:31
+msgid "group links are clickable"
+msgstr "Gruppelinks er klikbare"
+
+#: ckanext/dataguide/templates/admin/snippets/groups_list.html:7
+msgid "Site Groups"
+msgstr "Grupper"
+
+#: ckanext/dataguide/templates/admin/snippets/groups_list.html:11
+msgid "No more group items"
+msgstr "Der er ikke flere gruppeelementer"
+
+#: ckanext/dataguide/templates/admin/snippets/groups_list.html:27
+msgid "Drag group items here"
+msgstr "Træk gruppeelementer her"
+
+#: ckanext/dataguide/templates/admin/snippets/groups_list.html:40
+msgid "Save"
+msgstr "Gem"

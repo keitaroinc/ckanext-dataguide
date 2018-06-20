@@ -1,0 +1,35 @@
+{% extends "admin/base.html" %}
+{% import 'macros/form.html' as form %}
+{% block scripts %}
+{{ super() }}
+{% resource "dataguide/dragula.js" %}
+{% resource "dataguide/data_guide.js" %}
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="/css/data-guide.css">
+{% endblock %}
+
+{% block primary_content_inner %}
+  {% snippet 'admin/snippets/groups_list.html', data=data %}
+{% endblock %}
+
+{% block secondary_content %}
+  <div class="module module-narrow module-shallow">
+    <h2 class="module-heading">
+      <span class="fa fa-folder-open"></span>
+      <span class="fa-label">{{ _('Data Guide') }}</span>
+    </h2>
+    <div class="module-content">
+
+      {% set docs_url = "http://docs.ckan.org/en/{0}/sysadmin-guide.html".format(g.ckan_doc_version) %}
+
+        <p>{% trans %}In this section the administrator can manage the groups shown on the Home page.{% endtrans %}</p>
+        <p>{% trans %}The groups which are placed in the{% endtrans %} <strong>{% trans %}Data Guide Groups{% endtrans %}</strong> {% trans %}placeholder will be shown on the Home page with the specific order, set through this page.{% endtrans %}</p>
+        <p>{% trans %}Moving groups between the two placeholders is possible by simple dragging and dropping.{% endtrans %}</p>
+        <p>{% trans %}Please note that{% endtrans %} <strong>{% trans %}group links are clickable{% endtrans %}</strong>.</p>
+
+    </div>
+  </div>
+{% endblock %}

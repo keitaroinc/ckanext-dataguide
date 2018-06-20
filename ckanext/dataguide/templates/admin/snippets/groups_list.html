@@ -1,0 +1,41 @@
+{% set groups = c.site_groups %} {% set action_url = h.url_for('eds_data_guide') %}
+
+<div class="row wrapper">
+    <div class="col-md-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{_('Site Groups')}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="group-grid-wrap">
+                    <div class="group-grid-empty text-center hidden gu-unselectable"><span class="fa fa-folder"></span><span class="fa-label">{{_('No more group items')}}</span></div>
+                    <ul id="site-groups" class="group-grid media-grid">
+                        {% if groups %} {% for group in groups %} {% snippet 'admin/snippets/dataguide_group_item.html', group=group, truncate=50, truncate_title=35,
+                        position=1 %} {% endfor %}{% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="panel panel-success">
+            <div class="panel-heading">
+                <h3 class="panel-title">{{_('Data Guide Groups')}}</h3>
+            </div>
+            <div class="panel-body">
+                <div class="group-grid-wrap">
+                    <div class="group-grid-empty text-center hidden gu-unselectable"><span class="fa fa-folder-open"></span><span class="fa-label">{{_('Drag group items here')}}</span></div>
+                    <ul class="group-grid media-grid" id="dataguide-groups">
+                        {% if data %} {% for group in data %} {% snippet 'admin/snippets/dataguide_group_item.html', group=group, truncate=50, truncate_title=35,
+                        position=1 %} {% endfor %}  {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<form method='post' action="{{ action_url }}" id="data-guide-config" class="data-guide-form" enctype="multipart/form-data">
+    <input type="hidden" name="data_guide_items" id="data-guide-items" value="">
+    <button type="submit" id="data-guide-submit-button" class="btn btn-primary" disabled="disabled">{{_('Save')}}</button>
+</form>

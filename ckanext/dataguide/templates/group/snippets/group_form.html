@@ -1,0 +1,17 @@
+{% ckan_extends %}
+
+{% block basic_fields %}
+{{super()}}
+<fieldset>
+    <legend>{{_('Group title translations')}}</legend>
+    {% for locale in h.dataguide_available_locales() %}
+        {% set id_title = 'title_' + locale %}
+        {% set label = _('Title ') + locale %}
+        {% set placeholder = _('Translated Title') %}
+        {% set attrs = {} %}
+        {{ form.input(id_title, label=label, id=id_title, placeholder=placeholder, value=data[id_title],
+        error=errors[id_title], classes=['control-full'], attrs=attrs) }}
+    {% endfor %}
+</fieldset>
+{% endblock %}
+

@@ -1,0 +1,61 @@
+@import "dragula";
+@group-grid-min-height: 230px;
+.media-grid {
+    &.group-grid {
+        display: -ms-flexbox; // Required for < IE11
+        display: flex;
+        min-height: @group-grid-min-height;
+        -ms-flex-pack: center; // Required for < IE11
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        .media-item {
+            flex-basis: 28%;
+            margin: 2%;
+        }
+    }
+}
+
+.gu-unselectable {
+    .media-item {
+        list-style: none;
+    }
+}
+
+.group-grid-wrap {
+    position: relative;
+    display: -ms-flexbox; // Required for < IE11
+    display: flex;
+    -ms-flex-direction: column; // Required for < IE11
+    flex-direction: column;
+    min-height: @group-grid-min-height;
+    -ms-flex-pack: center; // Required for < IE11
+    justify-content: center;
+    overflow: auto;
+    .group-grid-empty {
+        position: absolute;
+        cursor: default; // position: absolute;
+        display: -ms-flexbox; // Required for < IE11
+        display: flex;
+        -ms-flex-direction: column; // Required for < IE11
+        flex-direction: column;
+        -ms-flex-item-align: center; // Required for < IE11
+        align-self: center;
+        opacity: 0.3; // width: 100%;
+        .fa {
+            font-size: 3em;
+            padding: 10px;
+        }
+    }
+}
+
+.group-grid-empty {
+    animation: 100ms fadeIn ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+}
